@@ -1,0 +1,98 @@
+Question 1 
+a) Should a well-designed class have high or low cohesion? 
+A well-designed class should have high cohesion. High cohesion means that all the methods and data within a class are closely related to a single, well-defined purpose or responsibility. Classes with high cohesion are easier to maintain, test, and reuse because they follow the Single Responsibility Principle (SRP)—one of the core object-oriented design principles. When a class performs tasks that are all conceptually linked, it minimizes coupling between components and makes the system more modular and stable.
+ In contrast, low cohesion occurs when a class tries to handle unrelated tasks, leading to “God classes” or utility classes that violate encapsulation and make debugging and refactoring more difficult. Thus, high cohesion is a sign of clean, maintainable, and extensible software design.
+
+b) Cohesion Evaluation and Refactoring Recommendations 
+The StudentPortalHelper class demonstrates low cohesion. According to Arthur Riel’s Heuristics for Object-Oriented Design, particularly Heuristic 2.1:
+“All the services offered by a class should be closely related to the single responsibility of that class.”
+This class violates that principle. Its methods perform a wide variety of unrelated functions:
+GPA calculation (computeGPA) — academic performance logic.
+
+
+CSV export (exportRosterToCsv) — file I/O and roster management.
+
+
+Email generation (makeWelcomeEmail) — communication and user messaging.
+
+
+Date formatting (formatDateForUi) — user interface utility.
+
+
+Payment processing (processTuitionPayment) — financial subsystem concern.
+
+
+Password strength checking (isStrongPassword) — security concern.
+
+
+Caching system (putCache, getCache) — low-level data storage and optimization concern.
+
+
+These features cross multiple domains—academics, finance, UI, security, and infrastructure—indicating low functional cohesion. The class behaves as a “dumping ground” for unrelated helper methods, which is characteristic of a God class anti-pattern.
+Refactoring Approach
+To improve cohesion, the class should be decomposed into multiple smaller, domain-specific classes, each with a clearly defined purpose. Below is one possible restructuring strategy:
+Academic Utilities
+
+
+Class: GPAService
+
+
+Methods: computeGPA(List<Integer> grades)
+
+
+File and Data Management
+
+
+Class: RosterExporter
+
+
+Methods: exportRosterToCsv(String filename, List<String> names)
+
+
+Communication
+
+
+Class: EmailFormatter
+
+
+Methods: makeWelcomeEmail(String studentName)
+
+
+UI Utilities
+
+
+Class: DateFormatter
+
+
+Methods: formatDateForUi(LocalDate date)
+
+
+Payment Processing
+
+
+Class: TuitionPaymentService
+
+
+Methods: processTuitionPayment(String studentId, double amount)
+
+
+
+Security
+
+
+Class: PasswordValidator
+
+
+Methods: isStrongPassword(String pwd)
+
+
+Caching
+
+
+Class: CacheManager
+
+
+Methods: putCache(String key, String value), getCache(String key)
+
+
+Each class would then be cohesive, focused on one area of responsibility, and more maintainable. The StudentPortalHelper name could instead represent a higher-level facade or orchestrator class that coordinates these smaller, specialized components when needed.

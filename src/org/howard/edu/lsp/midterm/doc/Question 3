@@ -1,0 +1,13 @@
+a) Explanation of Current Structure
+ The current system appears to use inheritance to represent trim levels such as Base, Luxury, and Sport as subclasses of the main Car class. Similarly, the engine types—Electric and Petrol—are likely implemented as subclasses of an Engine class. While this setup may initially seem logical, it creates a rigid structure. Once a car is created with a certain trim level, that trim level becomes fixed because inheritance defines a “type” relationship, not a “state” or “configuration.” In other words, a BaseCar is permanently a BaseCar and cannot later become a LuxuryCar without creating a completely new object.
+This design does not support the ability for a car’s trim level to be changed during the manufacturing process. It violates a key object-oriented design principle, which states that inheritance should only be used when subclasses truly represent distinct types of an object with fundamentally different behaviors. In this case, the trim levels represent configurable features rather than unique object types. Therefore, the current structure demonstrates poor flexibility and does not align with real-world behavior, where a car’s trim can be upgraded or modified before completion.
+
+b) Refactoring with Composition
+ To make trim levels dynamic, the class design should be refactored to use composition instead of inheritance. Rather than making Base, Luxury, and Sport separate subclasses of Car, the Car class should contain a field or component that represents its trim level. This would allow each Car object to reference a TrimLevel component that defines its specific features. As a result, the trim level can be changed simply by assigning a new trim configuration to the car instead of creating an entirely new subclass.
+This approach treats the trim level as a property or attribute of the car rather than as a type of car. It provides much greater flexibility and supports customer requests to change trims during production. The same reasoning applies to the engine type—Electric and Petrol should not be subclasses of Car, but rather separate, interchangeable components associated with it.
+By applying composition, the design becomes more modular, easier to maintain, and consistent with sound object-oriented principles. It also follows the Open-Closed Principle, meaning that new trim levels or engine types can be added later without modifying the core Car class. This makes the system more scalable and adaptable to future changes.
+
+
+
+
+
