@@ -1,0 +1,43 @@
+Design Notes
+
+Programming Language: Java
+
+Package Structure:
+org.howard.edu.lsp.assignment2
+
+Program Flow:
+Follows the classic ETL pattern:
+
+1) Extract:
+   - Read products.csv using BufferedReader.
+   - Skip header and blank lines.
+
+2) Transform:
+   - Convert product names to UPPERCASE.
+   - Apply 10% discount to Electronics.
+   - Re-categorize Electronics > $500 as "Premium Electronics".
+   - Compute PriceRange from final price.
+   - Round all prices to 2 decimals using BigDecimal with RoundingMode.HALF_UP.
+
+3) Load:
+   - Write transformed data to data/transformed_products.csv with header.
+
+Separation of Concerns:
+- Each ETL step is in its own method: extract(), transform(), load().
+
+Assumptions:
+- Input CSV always has header row.
+- Fields do not contain commas or quotes.
+- Prices are numeric and properly formatted in the input file.
+- No rows are skipped unless they are blank or malformed.
+- Output file is overwritten each run.
+- Relative paths are resolved from the project root.
+
+Testing Strategy:
+- Normal Input: Used sample products.csv with mixed categories and prices; verified transformed_products.csv matches expected transformations.
+- Empty Input: Tested with CSV containing only header; program still produces output with header row.
+- Missing Input File: Renamed/deleted input file; program prints a clear error message and exits gracefully.
+- Manual Verification: Checked that prices are rounded correctly, categories are updated properly, names are uppercase, and PriceRange is correct.
+
+AI Usage:
+- Used structure and examples from AI response, then modified to fit my program and project context.

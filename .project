@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>LSP_Project</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/org/howard/edu/lsp/midterm/doc/Question 1.docx</name>
+			<type>1</type>
+			<location>C:/Users/thisb/Downloads/Question 1.docx</location>
+		</link>
+		<link>
+			<name>src/org/howard/edu/lsp/midterm/doc/Question 3.docx</name>
+			<type>1</type>
+			<location>C:/Users/thisb/Downloads/Question 3.docx</location>
+		</link>
+		<link>
+			<name>src/org/howard/edu/lsp/midterm/doc/Question 4 .docx</name>
+			<type>1</type>
+			<location>C:/Users/thisb/Downloads/Question 4 .docx</location>
+		</link>
+		<link>
+			<name>src/org/howard/edu/lsp/midterm/doc/Question 5.docx</name>
+			<type>1</type>
+			<location>C:/Users/thisb/Downloads/Question 5.docx</location>
+		</link>
+		<link>
+			<name>src/org/howard/edu/lsp/midterm/question1/Question 1 References.docx</name>
+			<type>1</type>
+			<location>C:/Users/thisb/Downloads/Question 1 References.docx</location>
+		</link>
+		<link>
+			<name>src/org/howard/edu/lsp/midterm/question2/Question 2 References.docx</name>
+			<type>1</type>
+			<location>C:/Users/thisb/Downloads/Question 2 References.docx</location>
+		</link>
+		<link>
+			<name>src/org/howard/edu/lsp/midterm/question3/Question 3 References.docx</name>
+			<type>1</type>
+			<location>C:/Users/thisb/Downloads/Question 3 References.docx</location>
+		</link>
+		<link>
+			<name>src/org/howard/edu/lsp/midterm/question4/Question 4 References.docx</name>
+			<type>1</type>
+			<location>C:/Users/thisb/Downloads/Question 4 References.docx</location>
+		</link>
+		<link>
+			<name>src/org/howard/edu/lsp/midterm/question5/Question 5 References.docx</name>
+			<type>1</type>
+			<location>C:/Users/thisb/Downloads/Question 5 References.docx</location>
+		</link>
+	</linkedResources>
+</projectDescription>
