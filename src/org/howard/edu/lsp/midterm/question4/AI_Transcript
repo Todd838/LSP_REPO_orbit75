@@ -1,0 +1,11 @@
+While preparing my answer for Question 4, I used ChatGPT (OpenAI GPT-5) to clarify the conceptual differences between abstract classes and interfaces, and to understand how Java supports multiple inheritance through interface implementation rather than class extension.
+
+Source: ChatGPT (OpenAI GPT-5)
+
+Date of consultation: October 20, 2025
+
+Purpose: To verify understanding of object-oriented design principles and how inheritance and interface polymorphism apply in smart-device systems.
+The written rationale above reflects my own interpretation and wording based on that conceptual understanding.
+No other sources were used.
+
+

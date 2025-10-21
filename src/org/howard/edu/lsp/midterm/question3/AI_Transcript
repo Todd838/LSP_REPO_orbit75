@@ -1,0 +1,15 @@
+During the preparation of my answer for Question 3, I consulted ChatGPT for guidance on object-oriented design principles—specifically regarding the use of inheritance versus composition and how these concepts apply to changing car trim levels dynamically.
+
+Source: ChatGPT
+
+Date of consultation: October 20, 2025
+
+Purpose: To clarify the conceptual reasoning behind why the original design structure limits flexibility and how refactoring through composition can provide a more modular and maintainable solution.
+The final written explanation and analysis were developed in my own words based on my understanding of the concepts discussed.
+No additional online sources were used.
+
+
+
+
+
+
